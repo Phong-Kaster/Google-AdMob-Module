@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Google Admod Module"
+rootProject.name = "Google AdMob Module"
 include(":app")

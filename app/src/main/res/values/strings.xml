@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Google Admod Module</string>
+    <string name="app_name">Google AdMob Module</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

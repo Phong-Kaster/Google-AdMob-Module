@@ -46,6 +46,11 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
 
-
+    /*1. Google AdMob SDK*/
     implementation("com.google.android.gms:play-services-ads:22.3.0")
+
+
+    /*2. Navigation Component*/
+    implementation("androidx.navigation:navigation-fragment-ktx:2.6.0")
+    implementation("androidx.navigation:navigation-ui-ktx:2.6.0")
 }
