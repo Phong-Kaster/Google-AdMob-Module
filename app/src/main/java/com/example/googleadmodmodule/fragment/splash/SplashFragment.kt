@@ -1,21 +1,31 @@
 package com.example.googleadmodmodule.fragment.splash
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.os.Looper
+import androidx.navigation.NavDirections
+import androidx.navigation.fragment.findNavController
 import com.example.googleadmodmodule.R
 import com.example.googleadmodmodule.core.CoreFragment
+import com.example.googleadmodmodule.databinding.FragmentSplashBinding
 
 
-class SplashFragment : CoreFragment() {
+class SplashFragment : CoreFragment<FragmentSplashBinding>(
+    R.layout.fragment_splash
+) {
+    override fun setupData() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_splash, container, false)
+    }
+
+    override fun setupEvent() {
+        goToNextScreen()
+    }
+
+    private fun goToNextScreen() {
+        val runnable = Runnable(function = {
+            val destination: NavDirections = SplashFragmentDirections.actionSplashToIntro()
+            navigateTo(destination)
+        })
+
+        val handler = android.os.Handler(Looper.getMainLooper())
+        handler.postDelayed(runnable, 2000)
     }
 }

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_native_advertisement_shimmer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/ad_unit_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/ad_app_icon"
+                    android:layout_width="35dip"
+                    android:layout_height="35dip"
+                    android:adjustViewBounds="true"
+                    android:background="@color/color_shimmer"
+                    android:contentDescription="@string/image" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dip"
+                    android:layout_marginEnd="5dip"
+                    android:background="@color/color_shimmer"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/ad_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@color/color_shimmer"
+                android:lines="1"
+                android:maxLines="3"
+                android:textColor="@android:color/black"
+                android:textSize="11sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.gms.ads.nativead.MediaView
+                    android:id="@+id/ad_media"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/color_shimmer" />
+
+                <Button
+                    android:id="@+id/ad_call_to_action"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:layout_margin="10dp"
+                    android:background="@color/color_shimmer"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_ad_logo"
+            android:backgroundTint="@color/md_theme_light_primary"
+            android:minWidth="15dp"
+            android:minHeight="15dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="4dp"
+            android:text="@string/ad"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+
+    </RelativeLayout>
+
+</com.facebook.shimmer.ShimmerFrameLayout>

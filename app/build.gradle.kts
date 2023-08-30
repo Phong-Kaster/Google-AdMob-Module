@@ -1,11 +1,17 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
     namespace = "com.example.googleadmodmodule"
     compileSdk = 33
+
+    dataBinding {
+        android.buildFeatures.dataBinding = true
+    }
 
     defaultConfig {
         applicationId = "com.example.googleadmodmodule"
@@ -30,6 +36,7 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = "1.8"
     }
@@ -53,4 +60,9 @@ dependencies {
     /*2. Navigation Component*/
     implementation("androidx.navigation:navigation-fragment-ktx:2.6.0")
     implementation("androidx.navigation:navigation-ui-ktx:2.6.0")
+
+
+    /*3. Animation*/
+    implementation("com.airbnb.android:lottie:6.0.0")
+    implementation("com.facebook.shimmer:shimmer:0.5.0")
 }
