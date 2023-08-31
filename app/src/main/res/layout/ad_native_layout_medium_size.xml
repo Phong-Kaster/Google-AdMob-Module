@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <com.google.android.gms.ads.nativead.NativeAdView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="140dp">
+
+        <RelativeLayout
+            android:id="@+id/ad_unit_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_ad_container"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="13dp"
+                    android:paddingTop="18dp">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/ad_app_icon"
+                                android:layout_width="35dip"
+                                android:layout_height="35dip"
+                                android:adjustViewBounds="true"
+                                android:contentDescription="@string/image"
+                                android:src="@color/md_theme_light_primary" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/ad_headline"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="2dp"
+                                    android:ellipsize="end"
+                                    android:maxLines="2"
+                                    android:text="@string/dummy_title"
+                                    android:textColor="@color/color_advertisement"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    tools:text="Be twice as productive | Duet Display" />
+
+                                <RatingBar
+                                    android:id="@+id/ad_stars"
+                                    style="?android:attr/ratingBarStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:isIndicator="true"
+                                    android:numStars="5"
+                                    android:stepSize="0.5" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/ad_body"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:ellipsize="end"
+                            android:maxLines="3"
+                            android:text="@string/dummy_content"
+                            android:textColor="#505050"
+                            android:textSize="11sp"
+                            tools:text="Ex-Apple engineers turn your iPad, Mac, PC or Android into a blazing fasst monitor" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/ad_call_to_action"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_marginVertical="8dp"
+                    android:background="@drawable/background_ad_button"
+                    android:gravity="center"
+                    android:text="@string/install"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    tools:text="Download" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_ad_logo"
+                android:paddingHorizontal="8dp"
+                android:text="@string/ad"
+                android:textColor="@android:color/white"
+                android:textSize="11sp" />
+
+        </RelativeLayout>
+
+    </com.google.android.gms.ads.nativead.NativeAdView>
+</layout>

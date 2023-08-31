@@ -20,7 +20,7 @@ constructor(
     /*1. Define variable*/
 
     /*Default TAG*/
-    val TAG = "Google AdMob Module"
+    val TAG = "GoogleAdMobModule"
 
     /*Default data binding*/
     lateinit var binding: dataBinding
@@ -65,5 +65,9 @@ constructor(
     /*3. Override functions from CoreActivity that has implemented from Core Interface*/
     override fun showToast(content: String) {
         coreInterface?.showToast(content)
+    }
+
+    override fun isInternetConnected(): Boolean? {
+        return coreInterface?.isInternetConnected()
     }
 }

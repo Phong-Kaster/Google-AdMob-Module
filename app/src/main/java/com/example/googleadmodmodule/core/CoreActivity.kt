@@ -1,5 +1,7 @@
 package com.example.googleadmodmodule.core
 
+import android.content.Context
+import android.net.ConnectivityManager
 import android.os.Bundle
 import android.widget.Toast
 import androidx.annotation.LayoutRes
@@ -27,5 +29,10 @@ constructor(
 
     override fun showToast(content: String) {
         Toast.makeText(this@CoreActivity, content, Toast.LENGTH_SHORT).show()
+    }
+
+    override fun isInternetConnected(): Boolean {
+        val cm = this.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager?
+        return cm?.activeNetworkInfo != null && cm.activeNetworkInfo!!.isConnected
     }
 }

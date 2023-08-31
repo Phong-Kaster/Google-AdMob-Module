@@ -16,7 +16,7 @@
             android:layout_weight="1" />
 
         <FrameLayout
-            android:id="@+id/layoutNativeAdvertisement"
+            android:id="@+id/layout_native_ad"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <include layout="@layout/ad_native_shimmer" />

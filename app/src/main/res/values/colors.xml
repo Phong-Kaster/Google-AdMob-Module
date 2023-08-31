@@ -67,4 +67,6 @@
 
     <color name="color_advertisement">@color/md_theme_light_primary</color>
     <color name="color_shimmer">#16000000</color>
+    <color name="color_stroke">#5E58595A</color>
+    <color name="color_light_gray">#F9F9F9</color>
 </resources>

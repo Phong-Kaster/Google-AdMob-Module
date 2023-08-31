@@ -7,5 +7,6 @@
     <string name="ad">Ad</string>
     <string name="image">Image</string>
     <string name="dummy_title">Lorem Ipsum</string>
-    <string name="dummy_content">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</string>
+    <string name="install">Install</string>
+    <string name="dummy_content">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit…</string>
 </resources>
