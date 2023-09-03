@@ -65,4 +65,11 @@ dependencies {
     /*3. Animation*/
     implementation("com.airbnb.android:lottie:6.0.0")
     implementation("com.facebook.shimmer:shimmer:0.5.0")
+
+
+    /*4. Lifecycle observer - Listen for app foregrounding events*/
+    val lifecycle_version = "2.3.1"
+    implementation ("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version")
+    implementation ("androidx.lifecycle:lifecycle-process:$lifecycle_version")
+    kapt ("androidx.lifecycle:lifecycle-compiler:$lifecycle_version")
 }
