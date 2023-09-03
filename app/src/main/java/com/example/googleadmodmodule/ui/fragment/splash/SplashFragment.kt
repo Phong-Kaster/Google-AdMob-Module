@@ -1,4 +1,4 @@
-package com.example.googleadmodmodule.fragment.splash
+package com.example.googleadmodmodule.ui.fragment.splash
 
 import androidx.navigation.NavDirections
 import com.example.googleadmodmodule.MyApplication

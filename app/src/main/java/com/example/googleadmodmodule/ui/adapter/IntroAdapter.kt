@@ -1,11 +1,11 @@
-package com.example.googleadmodmodule.fragment.adapter
+package com.example.googleadmodmodule.ui.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
 import com.example.googleadmodmodule.R
-import com.example.googleadmodmodule.fragment.intro.Intro
-import com.example.googleadmodmodule.fragment.intro.IntroContentFragment
+import com.example.googleadmodmodule.ui.fragment.intro.Intro
+import com.example.googleadmodmodule.ui.fragment.intro.IntroContentFragment
 
 class IntroAdapter(fm: FragmentManager) :
     FragmentStatePagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {

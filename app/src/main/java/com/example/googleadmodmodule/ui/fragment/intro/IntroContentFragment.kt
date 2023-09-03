@@ -1,4 +1,4 @@
-package com.example.googleadmodmodule.fragment.intro
+package com.example.googleadmodmodule.ui.fragment.intro
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

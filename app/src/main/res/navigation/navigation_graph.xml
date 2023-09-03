@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.example.googleadmodmodule.fragment.splash.SplashFragment"
+        android:name="com.example.googleadmodmodule.ui.fragment.splash.SplashFragment"
         tools:layout="@layout/fragment_splash">
 
         <action
@@ -24,7 +24,7 @@
 
     <fragment
         android:id="@+id/introFragment"
-        android:name="com.example.googleadmodmodule.fragment.intro.IntroFragment"
+        android:name="com.example.googleadmodmodule.ui.fragment.intro.IntroFragment"
         tools:layout="@layout/fragment_intro">
 
         <action
@@ -40,7 +40,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.googleadmodmodule.fragment.home.HomeFragment"
+        android:name="com.example.googleadmodmodule.ui.fragment.home.HomeFragment"
         tools:layout="@layout/fragment_home" />
 
 

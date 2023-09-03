@@ -1,4 +1,4 @@
-package com.example.googleadmodmodule.fragment.intro
+package com.example.googleadmodmodule.ui.fragment.intro
 
 import androidx.viewpager.widget.ViewPager
 import com.bloodsugar.utils.transformation.ZoomOutSlideTransformation
@@ -6,7 +6,7 @@ import com.example.googleadmodmodule.MyApplication
 import com.example.googleadmodmodule.R
 import com.example.googleadmodmodule.core.CoreFragment
 import com.example.googleadmodmodule.databinding.FragmentIntroBinding
-import com.example.googleadmodmodule.fragment.adapter.IntroAdapter
+import com.example.googleadmodmodule.ui.adapter.IntroAdapter
 import com.example.googleadmodmodule.utility.UtilityView.autoScroll
 import com.example.googleadmodmodule.utility.UtilityView.clickWithDebounce
 

@@ -1,13 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
-    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/md_theme_dark_background"
-        tools:context=".fragment.home.HomeFragment">
+        tools:context=".ui.fragment.home.HomeFragment">
 
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainer"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/navigation_graph_home" />
 
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/md_theme_dark_onTertiary"
+            app:itemIconTint="@color/md_theme_dark_primary"
+            app:itemRippleColor="@color/md_theme_dark_onTertiary"
+            app:itemTextColor="@android:color/white"
+            app:menu="@menu/menu_home" />
 
     </FrameLayout>
 </layout>
