@@ -14,4 +14,9 @@ class AdManager {
         adID = AdConstant.ADMOD_INTERSTITIAL_ID,
         adName = "Ad Interstitial Splash"
     )
+
+    val adBanner: AdBanner = AdBanner(
+        adID = AdConstant.ADMOD_BANNER_ID,
+        adName = "Ad Banner"
+    )
 }

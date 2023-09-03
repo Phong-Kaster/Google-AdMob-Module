@@ -1,8 +1,6 @@
 package com.example.googleadmodmodule.admob
 
 import android.app.Activity
-import android.os.Build
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -46,9 +44,7 @@ constructor(
             // If this callback occurs after the activity is destroyed, you must call
             // destroy and return or you may get a memory leak.
             var activityDestroyed = false
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
-                activityDestroyed = activity.isDestroyed
-            }
+            activityDestroyed = activity.isDestroyed
             if (activityDestroyed || activity.isFinishing || activity.isChangingConfigurations) {
                 nativeAd.destroy()
                 return@forNativeAd
@@ -59,7 +55,12 @@ constructor(
             // otherwise you will have a memory leak.
             currentNativeAd?.destroy()
             currentNativeAd = nativeAd
-            Log.d(TAG, "native ad '${adName}' is ready for showing!")
+            AdLog.log(
+                tag = AdConstant.ADMOD_TAG,
+                adType = AdConstant.ADMOD_TYPE_NATIVE,
+                adName = adName,
+                content = "is ready for showing!"
+            )
         }
 
         //3. If video ads are shown then mute sound
@@ -73,7 +74,12 @@ constructor(
             override fun onAdFailedToLoad(loadAdError: LoadAdError) {
                 val error =
                     """domain: ${loadAdError.domain}, code: ${loadAdError.code}, message: ${loadAdError.message}""""
-                Log.d(TAG, "onAdFailedToLoad - error: $error")
+                AdLog.log(
+                    tag = AdConstant.ADMOD_TAG,
+                    adType = AdConstant.ADMOD_TYPE_NATIVE,
+                    adName = adName,
+                    content = error
+                )
             }
         }
         adLoader = builder.withAdListener(adListener).build()
@@ -83,7 +89,12 @@ constructor(
     fun showAd(layoutInflater: LayoutInflater, adContainer: ViewGroup) {
         //1. if current native ad is null then stop
         if (currentNativeAd == null) {
-            Log.d(TAG, "native ad '${adName}' is null !")
+            AdLog.log(
+                tag = AdConstant.ADMOD_TAG,
+                adType = AdConstant.ADMOD_TYPE_NATIVE,
+                adName = adName,
+                content = "is null !"
+            )
             adContainer.makeGone()
             return
         }
@@ -207,11 +218,21 @@ constructor(
                         // Publishers should allow native ads to complete video playback before
                         // refreshing or replacing them with another ad in the same UI location.
                         super.onVideoEnd()
-                        Log.d(TAG, "populateAd - ad has video")
+                        AdLog.log(
+                            tag = AdConstant.ADMOD_TAG,
+                            adType = AdConstant.ADMOD_TYPE_NATIVE,
+                            adName = adName,
+                            content = "ad has video"
+                        )
                     }
                 }
         } else {
-            Log.d(TAG, "populateAd - ad has not video")
+            AdLog.log(
+                tag = AdConstant.ADMOD_TAG,
+                adType = AdConstant.ADMOD_TYPE_NATIVE,
+                adName = adName,
+                content = "ad has not video"
+            )
         }
 
         //0. populate native ad on Intro Screen
@@ -313,11 +334,21 @@ constructor(
                         // Publishers should allow native ads to complete video playback before
                         // refreshing or replacing them with another ad in the same UI location.
                         super.onVideoEnd()
-                        Log.d(TAG, "populateAd - ad has video")
+                        AdLog.log(
+                            tag = AdConstant.ADMOD_TAG,
+                            adType = AdConstant.ADMOD_TYPE_NATIVE,
+                            adName = adName,
+                            content = "ad has video"
+                        )
                     }
                 }
         } else {
-            Log.d(TAG, "populateAd - ad has not video")
+            AdLog.log(
+                tag = AdConstant.ADMOD_TAG,
+                adType = AdConstant.ADMOD_TYPE_NATIVE,
+                adName = adName,
+                content = "ad has not video"
+            )
         }
 
         //0. populate native ad on Intro Screen
@@ -419,11 +450,21 @@ constructor(
                         // Publishers should allow native ads to complete video playback before
                         // refreshing or replacing them with another ad in the same UI location.
                         super.onVideoEnd()
-                        Log.d(TAG, "populateAd - ad has video")
+                        AdLog.log(
+                            tag = AdConstant.ADMOD_TAG,
+                            adType = AdConstant.ADMOD_TYPE_NATIVE,
+                            adName = adName,
+                            content = "ad has video"
+                        )
                     }
                 }
         } else {
-            Log.d(TAG, "populateAd - ad has not video")
+            AdLog.log(
+                tag = AdConstant.ADMOD_TAG,
+                adType = AdConstant.ADMOD_TYPE_NATIVE,
+                adName = adName,
+                content = "ad has not video"
+            )
         }
 
         //0. populate native ad on Intro Screen

@@ -2,7 +2,6 @@ package com.example.googleadmodmodule.admob
 
 import android.app.Activity
 import android.util.Log
-import com.example.googleadmodmodule.utility.UtilityOverall
 import com.google.android.gms.ads.AdError
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.FullScreenContentCallback
@@ -29,7 +28,12 @@ constructor(
             object : InterstitialAdLoadCallback() {
                 override fun onAdLoaded(interstitialAd: InterstitialAd) {
                     // The adInterstitial reference will be null until an ad is loaded.
-                    Log.d(TAG, "ad Interstitial - name '${adName}' is ready for showing !")
+                    AdLog.log(
+                        tag = AdConstant.ADMOD_TAG,
+                        adType = AdConstant.ADMOD_TYPE_INTERSTITIAL,
+                        adName = adName,
+                        content = "is ready for showing"
+                    )
                     adInterstitial = interstitialAd
 
                     // The adInterstitial is ready for being shown
@@ -38,44 +42,73 @@ constructor(
 
                 override fun onAdFailedToLoad(loadAdError: LoadAdError) {
                     // Handle the error
-                    Log.d(TAG, "ad Interstitial - name '${adName}' has error: ${loadAdError.message}")
+                    AdLog.log(
+                        tag = AdConstant.ADMOD_TAG,
+                        adType = AdConstant.ADMOD_TYPE_INTERSTITIAL,
+                        adName = adName,
+                        content = "has error: ${loadAdError.message}\""
+                    )
                     adInterstitial = null
                 }
             })
     }
 
     fun showAd(activity: Activity, callback: Callback) {
-        Log.d(TAG, "showAd is running !")
         adInterstitial?.fullScreenContentCallback = object : FullScreenContentCallback() {
             override fun onAdClicked() {
                 // Called when a click is recorded for an ad.
-                Log.d(TAG, "Ad was clicked.")
+                AdLog.log(
+                    tag = AdConstant.ADMOD_TAG,
+                    adType = AdConstant.ADMOD_TYPE_INTERSTITIAL,
+                    adName = adName,
+                    content = "Ad was clicked."
+                )
                 callback.onAdClicked()
             }
 
             override fun onAdDismissedFullScreenContent() {
                 // Called when ad is dismissed.
-                Log.d(TAG, "Ad dismissed fullscreen content.")
+                AdLog.log(
+                    tag = AdConstant.ADMOD_TAG,
+                    adType = AdConstant.ADMOD_TYPE_INTERSTITIAL,
+                    adName = adName,
+                    content = "onAdDismissedFullScreenContent."
+                )
                 adInterstitial = null
                 callback.onAdDismissedFullScreenContent()
             }
 
             override fun onAdFailedToShowFullScreenContent(p0: AdError) {
                 // Called when ad fails to show.
-                Log.e(TAG, "Ad failed to show fullscreen content.")
+                AdLog.log(
+                    tag = AdConstant.ADMOD_TAG,
+                    adType = AdConstant.ADMOD_TYPE_INTERSTITIAL,
+                    adName = adName,
+                    content = "failed to show fullscreen content.."
+                )
                 adInterstitial = null
                 callback.onAdFailedToShowFullScreenContent()
             }
 
             override fun onAdImpression() {
                 // Called when an impression is recorded for an ad.
-                Log.d(TAG, "Ad recorded an impression.")
+                AdLog.log(
+                    tag = AdConstant.ADMOD_TAG,
+                    adType = AdConstant.ADMOD_TYPE_INTERSTITIAL,
+                    adName = adName,
+                    content = "recorded an impression."
+                )
                 callback.onAdImpression()
             }
 
             override fun onAdShowedFullScreenContent() {
                 // Called when ad is shown.
-                Log.d(TAG, "Ad showed fullscreen content.")
+                AdLog.log(
+                    tag = AdConstant.ADMOD_TAG,
+                    adType = AdConstant.ADMOD_TYPE_INTERSTITIAL,
+                    adName = adName,
+                    content = "showed fullscreen content."
+                )
                 callback.onAdShowedFullScreenContent()
             }
         }
@@ -83,7 +116,12 @@ constructor(
         if (adInterstitial != null) {
             adInterstitial?.show(activity)
         } else {
-            Log.d("TAG", "The interstitial ad wasn't ready yet.")
+            AdLog.log(
+                tag = AdConstant.ADMOD_TAG,
+                adType = AdConstant.ADMOD_TYPE_INTERSTITIAL,
+                adName = adName,
+                content = "ad wasn't ready yet."
+            )
         }
     }
 

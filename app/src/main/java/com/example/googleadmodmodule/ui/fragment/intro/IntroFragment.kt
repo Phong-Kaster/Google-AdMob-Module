@@ -14,13 +14,17 @@ class IntroFragment : CoreFragment<FragmentIntroBinding>(
     R.layout.fragment_intro
 ) {
     private var adapter: IntroAdapter? = null
+
+    override fun setupData() {
+        super.setupData()
+        MyApplication.adManager.adNativeIntro.showAd(layoutInflater = layoutInflater, adContainer = binding.layoutNativeAd)
+        MyApplication.adManager.adBanner.loadAd(context = requireContext())
+    }
+
     override fun setupView() {
         super.setupView()
         prepareViewPager()
-        MyApplication.adManager.adNativeIntro.showAd(
-            layoutInflater = layoutInflater,
-            adContainer = binding.layoutNativeAd
-        )
+
     }
 
     override fun setupEvent() {
