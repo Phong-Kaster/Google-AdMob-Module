@@ -18,7 +18,6 @@ class IntroFragment : CoreFragment<FragmentIntroBinding>(
     override fun setupData() {
         super.setupData()
         MyApplication.adManager.adNativeIntro.showAd(layoutInflater = layoutInflater, adContainer = binding.layoutNativeAd)
-        MyApplication.adManager.adBanner.loadAd(context = requireContext())
     }
 
     override fun setupView() {

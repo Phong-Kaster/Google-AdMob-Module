@@ -1,7 +1,6 @@
 package com.example.googleadmodmodule.admob
 
 import android.content.Context
-import android.util.Log
 import android.view.ViewGroup
 import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
@@ -19,7 +18,7 @@ constructor(
     private lateinit var adView: AdView
     private val adRequest: AdRequest = AdRequest.Builder().build()
 
-    fun loadAd(context: Context) {
+    fun loadAndShowAd(context: Context, adContainer: ViewGroup) {
         //1. Create AdView programmatically
         adView = AdView(context)
         adView.setAdSize(adSize)
@@ -58,6 +57,7 @@ constructor(
                     adName = adName,
                     "onAdFailedToLoad"
                 )
+                adContainer.removeAllViews()
             }
 
             override fun onAdImpression() {
@@ -93,12 +93,10 @@ constructor(
             }
         }
 
-    }
-
-    fun showAd(adContainer: ViewGroup) {
-
+        //3. Show Ad
         adContainer.removeAllViews()
         adContainer.addView(adView)
+
     }
 
     interface Callback {

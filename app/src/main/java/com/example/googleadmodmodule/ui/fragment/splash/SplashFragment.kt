@@ -49,6 +49,10 @@ class SplashFragment : CoreFragment<FragmentSplashBinding>(
                         override fun onAdShowedFullScreenContent() {
                             goToNextScreen()
                         }
+
+                        override fun onAdFailedToLoad() {
+                            goToNextScreen()
+                        }
                     })
         } else { // device does not has internet connection then go ahead
             goToNextScreen()

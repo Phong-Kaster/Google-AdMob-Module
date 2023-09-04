@@ -29,18 +29,5 @@
             app:itemRippleColor="@color/md_theme_dark_onTertiary"
             app:itemTextColor="@android:color/white"
             app:menu="@menu/menu_home" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@android:color/darker_gray" />
-
-        <FrameLayout
-            android:id="@+id/layoutAdBanner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <include layout="@layout/ad_banner_shimmer" />
-        </FrameLayout>
     </LinearLayout>
 </layout>

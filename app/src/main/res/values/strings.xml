@@ -12,4 +12,7 @@
     <string name="home">Home</string>
     <string name="setting">Setting</string>
     <string name="dashboard">Dashboard</string>
+    <string name="open_banner_samples">Open Banner Samples</string>
+    <string name="open_native_samples">Open Native Samples</string>
+    <string name="refresh">refresh</string>
 </resources>

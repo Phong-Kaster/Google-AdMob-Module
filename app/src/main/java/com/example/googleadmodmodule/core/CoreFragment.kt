@@ -11,6 +11,7 @@ import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
+import com.example.googleadmodmodule.utility.UtilityNavigation.gotoDestination
 
 open class CoreFragment<dataBinding : ViewDataBinding>
 constructor(
@@ -59,7 +60,8 @@ constructor(
     protected open fun setupEvent() {}
 
     fun navigateTo(destination: NavDirections) {
-        findNavController().navigate(destination)
+        /*findNavController().navigate(destination)*/
+        gotoDestination(destination)
     }
 
     /*3. Override functions from CoreActivity that has implemented from Core Interface*/

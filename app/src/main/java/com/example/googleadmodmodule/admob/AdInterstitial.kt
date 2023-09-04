@@ -49,6 +49,7 @@ constructor(
                         content = "has error: ${loadAdError.message}\""
                     )
                     adInterstitial = null
+                    callback.onAdFailedToLoad()
                 }
             })
     }
@@ -132,5 +133,6 @@ constructor(
         fun onAdFailedToShowFullScreenContent()
         fun onAdImpression()
         fun onAdShowedFullScreenContent()
+        fun onAdFailedToLoad()
     }
 }

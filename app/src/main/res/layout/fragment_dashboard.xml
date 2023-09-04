@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
-    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
         android:background="@color/md_theme_dark_background"
         tools:context=".ui.fragment.dashboard.DashboardFragment">
 
-        <!-- TODO: Update blank fragment layout -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textColor="@color/md_theme_dark_primary"
-            android:text="@string/dashboard" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonAdBanner"
+            android:layout_width="300dp"
+            android:gravity="center"
+            android:layout_marginVertical="10dp"
+            android:layout_height="wrap_content"
+            android:text="@string/open_banner_samples" />
 
-    </FrameLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonAdNative"
+            android:layout_width="300dp"
+            android:layout_marginVertical="10dp"
+            android:layout_height="wrap_content"
+            android:text="@string/open_native_samples" />
+
+    </LinearLayout>
 </layout>
