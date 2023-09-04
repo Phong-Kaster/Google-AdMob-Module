@@ -1,9 +1,13 @@
+import java.text.SimpleDateFormat
+import java.util.Date
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("kotlin-kapt")
     id("androidx.navigation.safeargs.kotlin")
 }
+
 
 android {
     namespace = "com.example.googleadmodmodule"
@@ -21,7 +25,14 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        val input = Date()
+        val dateFormat = SimpleDateFormat("MMM-dd-yyyy")
+        val output = dateFormat.format(input)
+        setProperty ("archivesBaseName", "GoogleAdMobModule-v$versionCode($versionName)-$output")
     }
+
+
 
     buildTypes {
         release {
@@ -32,6 +43,9 @@ android {
             )
         }
     }
+
+
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -41,6 +55,8 @@ android {
         jvmTarget = "1.8"
     }
 }
+
+
 
 dependencies {
 
