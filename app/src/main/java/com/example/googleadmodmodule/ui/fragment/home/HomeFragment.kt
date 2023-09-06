@@ -6,6 +6,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.googleadmodmodule.MyApplication
 import com.example.googleadmodmodule.R
+import com.example.googleadmodmodule.admob.AdManagerAppOpen
 import com.example.googleadmodmodule.core.CoreFragment
 import com.example.googleadmodmodule.databinding.FragmentHomeBinding
 
@@ -16,6 +17,7 @@ class HomeFragment : CoreFragment<FragmentHomeBinding>(
 
     override fun onResume() {
         super.onResume()
+        AdManagerAppOpen.getInstance().enableAppOpenAd()
         //preload native ads for AdNativeFragment
         MyApplication.adManager.adNativeStandard.loadAd(activity = requireActivity())
         MyApplication.adManager.adNativeFullSize.loadAd(activity = requireActivity())

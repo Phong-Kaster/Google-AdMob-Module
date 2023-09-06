@@ -4,6 +4,7 @@ import androidx.navigation.NavDirections
 import com.example.googleadmodmodule.MyApplication
 import com.example.googleadmodmodule.R
 import com.example.googleadmodmodule.admob.AdInterstitial
+import com.example.googleadmodmodule.admob.AdManagerAppOpen
 import com.example.googleadmodmodule.core.CoreFragment
 import com.example.googleadmodmodule.databinding.FragmentSplashBinding
 
@@ -18,6 +19,11 @@ class SplashFragment : CoreFragment<FragmentSplashBinding>(
     override fun setupEvent() {
         super.setupEvent()
         showAdIfReady()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        AdManagerAppOpen.getInstance().disableAppOpenAd()
     }
 
 

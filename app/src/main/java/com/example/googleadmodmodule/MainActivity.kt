@@ -10,9 +10,4 @@ import com.example.googleadmodmodule.databinding.ActivityMainBinding
 class MainActivity : CoreActivity<ActivityMainBinding>(
     layoutRes = R.layout.activity_main
 ) {
-    override fun onResume() {
-        super.onResume()
-
-
-    }
 }

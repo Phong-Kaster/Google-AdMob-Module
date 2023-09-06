@@ -4,6 +4,7 @@ import androidx.viewpager.widget.ViewPager
 import com.bloodsugar.utils.transformation.ZoomOutSlideTransformation
 import com.example.googleadmodmodule.MyApplication
 import com.example.googleadmodmodule.R
+import com.example.googleadmodmodule.admob.AdManagerAppOpen
 import com.example.googleadmodmodule.core.CoreFragment
 import com.example.googleadmodmodule.databinding.FragmentIntroBinding
 import com.example.googleadmodmodule.ui.adapter.IntroAdapter
@@ -59,5 +60,10 @@ class IntroFragment : CoreFragment<FragmentIntroBinding>(
         binding.tabLayout.setupWithViewPager(binding.viewPager)
         binding.viewPager.autoScroll(2500)
         binding.viewPager.setPageTransformer(true, ZoomOutSlideTransformation())
+    }
+
+    override fun onResume() {
+        super.onResume()
+        AdManagerAppOpen.getInstance().disableAppOpenAd()
     }
 }
