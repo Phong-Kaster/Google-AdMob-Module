@@ -2,6 +2,7 @@ package com.example.googleadmodmodule.admob
 
 import android.content.Context
 import android.view.ViewGroup
+import com.example.googleadmodmodule.utility.UtilityView.makeGone
 import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
@@ -58,6 +59,7 @@ constructor(
                     "onAdFailedToLoad"
                 )
                 adContainer.removeAllViews()
+                adContainer.makeGone()
             }
 
             override fun onAdImpression() {

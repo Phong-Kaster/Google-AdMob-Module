@@ -2,7 +2,12 @@ package com.example.googleadmodmodule.admob
 
 import android.app.Activity
 import android.content.Context
+import androidx.fragment.app.FragmentContainerView
+import com.example.googleadmodmodule.MainActivity
 import com.example.googleadmodmodule.MyApplication
+import com.example.googleadmodmodule.R
+import com.example.googleadmodmodule.utility.UtilityView.makeGone
+import com.example.googleadmodmodule.utility.UtilityView.makeVisible
 import com.google.android.gms.ads.AdError
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.FullScreenContentCallback
@@ -14,8 +19,6 @@ import java.util.Date
 /**
  * This class is used only for loading and showing app open ads*/
 class AdManagerAppOpen {
-
-    private val LOG_TAG = AdConstant.ADMOD_TAG
 
     private var appOpenAd: AppOpenAd? = null
     private var isLoadingAd = false
@@ -175,6 +178,7 @@ class AdManagerAppOpen {
                 )
                 callback.showAd()
                 loadAd(activity)
+                (activity as MainActivity).findViewById<FragmentContainerView>(R.id.navHostMain).makeVisible()
             }
 
             /** Called when fullscreen content failed to show. */
@@ -189,6 +193,7 @@ class AdManagerAppOpen {
                 )
                 callback.showAd()
                 loadAd(activity)
+                (activity as MainActivity).findViewById<FragmentContainerView>(R.id.navHostMain).makeVisible()
             }
 
             /** Called when fullscreen content is shown. */
@@ -199,6 +204,7 @@ class AdManagerAppOpen {
                     adName = "App open ad",
                     content = "onAdShowedFullScreenContent."
                 )
+                (activity as MainActivity).findViewById<FragmentContainerView>(R.id.navHostMain).makeGone()
             }
         }
         isShowingAd = true

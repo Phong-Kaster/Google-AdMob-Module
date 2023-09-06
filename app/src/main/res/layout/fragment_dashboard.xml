@@ -7,7 +7,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center"
-        android:background="@color/md_theme_light_background"
+        android:background="@color/md_theme_dark_background"
         tools:context=".ui.fragment.dashboard.DashboardFragment">
 
         <com.google.android.material.button.MaterialButton
