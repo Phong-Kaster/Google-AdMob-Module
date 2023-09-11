@@ -9,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import com.google.android.gms.ads.MobileAds
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 open class CoreActivity<dataBinding : ViewDataBinding>
 constructor(

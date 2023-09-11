@@ -8,10 +8,12 @@ import android.view.ViewGroup
 import com.example.googleadmodmodule.R
 import com.example.googleadmodmodule.core.CoreFragment
 import com.example.googleadmodmodule.databinding.FragmentIntroContentBinding
+import dagger.hilt.android.AndroidEntryPoint
 
 /**
  * show content of an intro
  */
+@AndroidEntryPoint
 class IntroContentFragment : CoreFragment<FragmentIntroContentBinding>(
     layoutRes = R.layout.fragment_intro_content
 ) {

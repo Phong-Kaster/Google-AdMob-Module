@@ -7,8 +7,9 @@ import com.example.googleadmodmodule.admob.AdInterstitial
 import com.example.googleadmodmodule.admob.AdManagerAppOpen
 import com.example.googleadmodmodule.core.CoreFragment
 import com.example.googleadmodmodule.databinding.FragmentSplashBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class SplashFragment : CoreFragment<FragmentSplashBinding>(
     R.layout.fragment_splash
 ) {

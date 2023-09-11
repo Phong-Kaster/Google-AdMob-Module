@@ -8,6 +8,7 @@ import com.example.googleadmodmodule.admob.AdManager
 import com.example.googleadmodmodule.admob.AdManagerAppOpen
 import com.example.googleadmodmodule.utility.UtilityOverall
 import com.google.android.gms.ads.MobileAds
+import dagger.hilt.android.HiltAndroidApp
 
 
 /**
@@ -15,6 +16,7 @@ import com.google.android.gms.ads.MobileAds
  * and show ads when activities change states. */
 private val TAG = "GoogleAdMobModule"
 
+@HiltAndroidApp
 class MyApplication : Application(), Application.ActivityLifecycleCallbacks  {
 
 

@@ -9,8 +9,9 @@ import com.example.googleadmodmodule.R
 import com.example.googleadmodmodule.admob.AdManagerAppOpen
 import com.example.googleadmodmodule.core.CoreFragment
 import com.example.googleadmodmodule.databinding.FragmentHomeBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class HomeFragment : CoreFragment<FragmentHomeBinding>(
     layoutRes = R.layout.fragment_home
 ), HomeNavigator {

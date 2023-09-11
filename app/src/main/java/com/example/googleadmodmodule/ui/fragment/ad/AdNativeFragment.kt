@@ -6,7 +6,9 @@ import com.example.googleadmodmodule.R
 import com.example.googleadmodmodule.core.CoreFragment
 import com.example.googleadmodmodule.databinding.FragmentAdNativeBinding
 import com.example.googleadmodmodule.utility.UtilityView.clickWithDebounce
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class AdNativeFragment : CoreFragment<FragmentAdNativeBinding>(
     layoutRes = R.layout.fragment_ad_native
 ) {

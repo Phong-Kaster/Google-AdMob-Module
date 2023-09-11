@@ -5,8 +5,9 @@ import com.example.googleadmodmodule.R
 import com.example.googleadmodmodule.core.CoreFragment
 import com.example.googleadmodmodule.databinding.FragmentAdBannerBinding
 import com.example.googleadmodmodule.utility.UtilityView.clickWithDebounce
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class AdBannerFragment : CoreFragment<FragmentAdBannerBinding>(
     layoutRes = R.layout.fragment_ad_banner
 ) {

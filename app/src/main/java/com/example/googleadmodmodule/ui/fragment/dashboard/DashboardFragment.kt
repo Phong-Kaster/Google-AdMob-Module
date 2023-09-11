@@ -7,8 +7,9 @@ import com.example.googleadmodmodule.ui.fragment.home.HomeFragment
 import com.example.googleadmodmodule.ui.fragment.home.HomeFragmentDirections
 import com.example.googleadmodmodule.ui.fragment.home.HomeNavigator
 import com.example.googleadmodmodule.utility.UtilityView.clickWithDebounce
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class DashboardFragment : CoreFragment<FragmentDashboardBinding>(
     layoutRes = R.layout.fragment_dashboard
 ) {
