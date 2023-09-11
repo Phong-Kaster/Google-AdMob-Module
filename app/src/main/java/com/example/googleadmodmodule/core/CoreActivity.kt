@@ -29,6 +29,8 @@ constructor(
         MobileAds.initialize(this) {}
     }
 
+
+
     override fun showToast(content: String) {
         Toast.makeText(this@CoreActivity, content, Toast.LENGTH_SHORT).show()
     }

@@ -12,6 +12,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
 import com.example.googleadmodmodule.utility.UtilityNavigation.gotoDestination
+import com.example.googleadmodmodule.utility.UtilitySharedPreference
+import javax.inject.Inject
 
 open class CoreFragment<dataBinding : ViewDataBinding>
 constructor(
@@ -23,11 +25,18 @@ constructor(
     /*Default TAG*/
     val TAG = "GoogleAdMobModule"
 
+
     /*Default data binding*/
     lateinit var binding: dataBinding
 
+
     /*For reusing all functions that implemented from CoreActivity*/
     private var coreInterface: CoreInterface? = null
+
+
+    /*Inject shared preference*/
+    @Inject
+    lateinit var sharedPreference: UtilitySharedPreference
 
 
     /*2. Configure what happens for all fragment in this application*/
@@ -56,7 +65,7 @@ constructor(
     }
 
     protected open fun setupData() {}
-    protected open fun setupView(){}
+    protected open fun setupView() {}
     protected open fun setupEvent() {}
 
     fun navigateTo(destination: NavDirections) {

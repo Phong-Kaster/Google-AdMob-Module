@@ -14,14 +14,13 @@ import dagger.hilt.android.HiltAndroidApp
 /**
  * Application class that initializes, loads
  * and show ads when activities change states. */
-private val TAG = "GoogleAdMobModule"
+private val TAG = "Google AdMob Module"
 
 @HiltAndroidApp
-class MyApplication : Application(), Application.ActivityLifecycleCallbacks  {
+class MyApplication : Application(), Application.ActivityLifecycleCallbacks {
 
 
-
-    companion object{
+    companion object {
         lateinit var adManager: AdManager
     }
 
@@ -60,34 +59,31 @@ class MyApplication : Application(), Application.ActivityLifecycleCallbacks  {
 
     /** -------------------------------------ActivityLifecycleCallback methods------------------------------------- */
     override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
-        Log.d(TAG, "onActivityCreated !")
     }
 
     override fun onActivityStarted(activity: Activity) {
-        Log.d(TAG, "onActivityStarted !")
     }
 
     override fun onActivityResumed(activity: Activity) {
-        Log.d(TAG, "onActivityResumed !")
-        if(AdManagerAppOpen.getInstance().canAppOpenAdShown){
+        if (AdManagerAppOpen.getInstance().canAppOpenAdShown) {
             AdManagerAppOpen.getInstance().showAd(activity, activity.application as MyApplication)
         }
     }
 
     override fun onActivityPaused(activity: Activity) {
-        Log.d(TAG, "onActivityPaused !")
+
     }
 
     override fun onActivityStopped(activity: Activity) {
-        Log.d(TAG, "onActivityStopped !")
+
     }
 
     override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {
-        Log.d(TAG, "onActivitySaveInstanceState !")
+
     }
 
     override fun onActivityDestroyed(activity: Activity) {
-        Log.d(TAG, "onActivityDestroyed !")
+
     }
 
     /** Interface definition for a callback to be invoked when an app open ad is complete. */

@@ -67,7 +67,11 @@ class SplashFragment : CoreFragment<FragmentSplashBinding>(
     }
 
     private fun goToNextScreen() {
-        val destination: NavDirections = SplashFragmentDirections.actionSplashToIntro()
+        val destination: NavDirections = if (sharedPreference.isIntroShown) {
+            SplashFragmentDirections.actionSplashToIntro()
+        } else {
+            SplashFragmentDirections.actionSplashToHome()
+        }
         navigateTo(destination)
     }
 }

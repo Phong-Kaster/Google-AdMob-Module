@@ -13,6 +13,7 @@ import com.example.googleadmodmodule.utility.UtilitySharedPreference
 import com.example.googleadmodmodule.utility.UtilityView.autoScroll
 import com.example.googleadmodmodule.utility.UtilityView.clickWithDebounce
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class IntroFragment : CoreFragment<FragmentIntroBinding>(
@@ -20,10 +21,11 @@ class IntroFragment : CoreFragment<FragmentIntroBinding>(
 ) {
     private var adapter: IntroAdapter? = null
 
+
+
     override fun setupData() {
         super.setupData()
         MyApplication.adManager.adNativeIntro.showAd(layoutInflater = layoutInflater, adContainer = binding.layoutNativeAd)
-
     }
 
     override fun setupView() {
@@ -33,6 +35,7 @@ class IntroFragment : CoreFragment<FragmentIntroBinding>(
 
     override fun setupEvent() {
         binding.start.clickWithDebounce(1000) {
+            sharedPreference.isIntroShown = false
             val destination = IntroFragmentDirections.actionIntroToHome()
             navigateTo(destination)
         }
