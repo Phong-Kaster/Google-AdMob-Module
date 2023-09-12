@@ -4,4 +4,6 @@ interface CoreInterface {
     fun showToast(content: String)
 
     fun isInternetConnected(): Boolean?
+
+    fun hideSystemNavigationBar()
 }

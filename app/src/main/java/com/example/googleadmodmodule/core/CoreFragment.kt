@@ -23,7 +23,7 @@ constructor(
     /*1. Define variable*/
 
     /*Default TAG*/
-    val TAG = "GoogleAdMobModule"
+    open val TAG = "Google Admob Module"
 
 
     /*Default data binding*/
@@ -65,7 +65,10 @@ constructor(
     }
 
     protected open fun setupData() {}
-    protected open fun setupView() {}
+    protected open fun setupView() {
+        hideSystemNavigationBar()
+    }
+
     protected open fun setupEvent() {}
 
     fun navigateTo(destination: NavDirections) {
@@ -80,5 +83,9 @@ constructor(
 
     override fun isInternetConnected(): Boolean? {
         return coreInterface?.isInternetConnected()
+    }
+
+    override fun hideSystemNavigationBar() {
+        coreInterface?.hideSystemNavigationBar()
     }
 }
