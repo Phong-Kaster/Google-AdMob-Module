@@ -29,13 +29,13 @@ object NotificationManger {
             //1. define variable
             val name: CharSequence = context.getString(R.string.app_name)
             val description = context.getString(R.string.notification_description)
-            val importance = NotificationManager.IMPORTANCE_DEFAULT
+            val importance = NotificationManager.IMPORTANCE_HIGH
             val channel = NotificationChannel(Constant.NORMAL_CHANNEL_ID, name, importance)
             channel.description = description
 
 
             //2. Register the channel with the system; you can't change the importance or other notification behaviors after this
-            val notificationManager = context.getSystemService(NotificationManager::class.java)
+            val notificationManager: NotificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
             notificationManager.createNotificationChannel(channel)
         }
     }
@@ -50,15 +50,24 @@ object NotificationManger {
         log("--> setup daily notification !")
         //1. define current time
         val now = Calendar.getInstance()
-        val currentHour = now[Calendar.HOUR_OF_DAY]
-        val currentMinute = now[Calendar.MINUTE]
+        val hour = now[Calendar.HOUR_OF_DAY]
+        val minute = now[Calendar.MINUTE]
         val month = now[Calendar.MONTH] + 1
         val date = now[Calendar.DATE]
         val year = now[Calendar.YEAR]
 
 
+
         //2. find time of next notification
-        val hour = if (currentHour < 9) 9 else 15
+        val alarmHour = when(hour){
+            in 0..8 -> 9
+            in 9..11 -> 12
+            in 12..14 -> 15
+            in 15..17 -> 18
+            in 18..20 -> 21
+            in 20..21 -> 22
+            else -> 6
+        }
 
 
 
@@ -66,19 +75,24 @@ object NotificationManger {
         val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
         val alarmTime = Calendar.getInstance()
         alarmTime.timeInMillis = System.currentTimeMillis()
-        alarmTime[Calendar.HOUR_OF_DAY] = hour
-        alarmTime[Calendar.MINUTE] = 1
-        alarmTime[Calendar.SECOND] = 0
+        alarmTime[Calendar.HOUR_OF_DAY] = alarmHour
+        alarmTime[Calendar.MINUTE] = 0
+        alarmTime[Calendar.SECOND] = 30
         if (now.after(alarmTime)) {
             alarmTime.add(Calendar.DATE, 1)
         }
 
-        log("--> now is $date/$month/$year $currentHour:$currentMinute")
-        log("--> next notification at $hour:1")
+        log("--> now is $date/$month/$year $hour:$minute")
+        log("--> next notification at $alarmHour")
 
         //Final. set up notification at specific time
         val intent = Intent(context, NotificationReceiver::class.java)
-        val pendingIntent = PendingIntent.getBroadcast(context, 100, intent, PendingIntent.FLAG_IMMUTABLE)
-        alarmManager.setExact(AlarmManager.RTC_WAKEUP, alarmTime.timeInMillis, pendingIntent)
+        val pendingIntent = PendingIntent.getBroadcast(context, 111, intent, PendingIntent.FLAG_IMMUTABLE)
+
+        try {
+            alarmManager.setExact(AlarmManager.RTC_WAKEUP, alarmTime.timeInMillis, pendingIntent)
+        }catch (ex: Exception){
+            ex.printStackTrace()
+        }
     }
 }

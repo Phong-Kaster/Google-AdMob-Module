@@ -105,8 +105,6 @@ class HomeFragment : CoreFragment<FragmentHomeBinding>(
 
         NotificationManger.createNotificationChannel(context = requireContext())
         NotificationManger.setupNotification(context = requireContext())
-
-        NotificationReceiver.popupNotification(context = requireContext(), intent = Intent ())
     }
 
     /**

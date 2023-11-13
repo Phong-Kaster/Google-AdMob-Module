@@ -14,7 +14,7 @@ object Constant {
     const val NORMAL_TAG = "Notification"
 
     // for clicking on button in Lockscreen-styled activity
-    const val ACTION                     = "action";
-    const val ACTION_RECORD              = "record";
-    const val ACTION_LISTEN_RECORD       = "listenRecord";
+    const val ACTION                     = "action"
+    const val ACTION_RECORD              = "record"
+    const val ACTION_LISTEN_RECORD       = "listenRecord"
 }

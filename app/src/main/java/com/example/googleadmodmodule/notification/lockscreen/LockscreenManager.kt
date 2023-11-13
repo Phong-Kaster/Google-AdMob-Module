@@ -25,7 +25,7 @@ object LockscreenManager {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             //1. define variable
             val name: CharSequence = context.getString(R.string.app_name)
-            val description = context.getString(R.string.app_name)
+            val description = context.getString(R.string.lockscreen_description)
             val importance = NotificationManager.IMPORTANCE_HIGH
             val channel = NotificationChannel(Constant.LOCKSCREEN_CHANNEL_ID, name, importance)
             channel.description = description
@@ -56,8 +56,7 @@ object LockscreenManager {
 
         //Final. set up notification at specific time
         val intent = Intent(context, LockscreenReceiver::class.java)
-        val pendingIntent =
-            PendingIntent.getBroadcast(context, 100, intent, PendingIntent.FLAG_IMMUTABLE)
+        val pendingIntent = PendingIntent.getBroadcast(context, 100, intent, PendingIntent.FLAG_IMMUTABLE)
         try {
             alarmManager.setExact(AlarmManager.RTC_WAKEUP, alarmTime.timeInMillis, pendingIntent)
         } catch (ex: Exception) {

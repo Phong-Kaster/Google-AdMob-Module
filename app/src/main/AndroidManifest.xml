@@ -50,5 +50,15 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </receiver>
+
+        <!-- For setting normal notifications -->
+        <receiver
+            android:name=".notification.normal.NotificationReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </receiver>
     </application>
 </manifest>
