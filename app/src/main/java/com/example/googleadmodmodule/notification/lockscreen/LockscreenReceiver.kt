@@ -20,7 +20,7 @@ class LockscreenReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         /*0. Start repeating notification if the device was shut down and then reboot*/
         if (intent.action == "android.intent.action.BOOT_COMPLETED") {
-            LockscreenManager.setupDailyLockscreenNotification(context)
+            LockscreenManager.setupLockscreenNotification(context)
         }
 
 
@@ -34,7 +34,7 @@ class LockscreenReceiver : BroadcastReceiver() {
         }
 
         //4. Set again this alarm manager
-        LockscreenManager.setupDailyLockscreenNotification(context)
+        LockscreenManager.setupLockscreenNotification(context)
     }
 
     private fun popupLockscreenNotification(context: Context) {

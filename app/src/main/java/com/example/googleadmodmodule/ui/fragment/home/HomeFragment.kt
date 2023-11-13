@@ -21,6 +21,7 @@ import com.example.googleadmodmodule.core.CoreFragment
 import com.example.googleadmodmodule.databinding.FragmentHomeBinding
 import com.example.googleadmodmodule.notification.lockscreen.LockscreenManager
 import com.example.googleadmodmodule.notification.normal.NotificationManger
+import com.example.googleadmodmodule.notification.normal.NotificationReceiver
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -91,15 +92,21 @@ class HomeFragment : CoreFragment<FragmentHomeBinding>(
     @RequiresApi(Build.VERSION_CODES.TIRAMISU)
     private fun setupNotification() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            val isPermissionAccessed = NotificationManger.isPermissionAccessed(requireContext())
+            val isPermissionAccessed = NotificationManger.isNotificationAccessed(requireContext())
             if (!isPermissionAccessed) {
                 requestPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
             }
         }
 
 
-        LockscreenManager.createLockscreenChannel(requireContext())
-        LockscreenManager.setupDailyLockscreenNotification(requireContext())
+        LockscreenManager.createLockscreenChannel(context = requireContext())
+        LockscreenManager.setupLockscreenNotification(context = requireContext())
+
+
+        NotificationManger.createNotificationChannel(context = requireContext())
+        NotificationManger.setupNotification(context = requireContext())
+
+        NotificationReceiver.popupNotification(context = requireContext(), intent = Intent ())
     }
 
     /**
@@ -112,7 +119,8 @@ class HomeFragment : CoreFragment<FragmentHomeBinding>(
     val requestPermissionLauncher =
         registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted: Boolean ->
             if (isGranted) {
-                LockscreenManager.setupDailyLockscreenNotification(requireContext())
+                LockscreenManager.setupLockscreenNotification(context = requireContext())
+                NotificationManger.setupNotification(context = requireContext())
                 showToast(getString(R.string.thank_you_and_many_blessings_to_you))
             } else {
                 if (shouldShowRequestPermissionRationale(Manifest.permission.POST_NOTIFICATIONS)) {
@@ -155,12 +163,13 @@ class HomeFragment : CoreFragment<FragmentHomeBinding>(
     @RequiresApi(Build.VERSION_CODES.TIRAMISU)
     private var requestPermissionSettingLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-            val isPermissionAccessed = NotificationManger.isPermissionAccessed(requireContext())
+            val isPermissionAccessed = NotificationManger.isNotificationAccessed(requireContext())
             if (!isPermissionAccessed) {
                 requestPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
             } else {
                 /*set a recurring notification at 6 AM every day*/
-                LockscreenManager.setupDailyLockscreenNotification(requireContext())
+                LockscreenManager.setupLockscreenNotification(context = requireContext())
+                NotificationManger.setupNotification(context = requireContext())
             }
         }
 }

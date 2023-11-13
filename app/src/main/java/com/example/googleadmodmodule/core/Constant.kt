@@ -11,6 +11,7 @@ object Constant {
     // for creating normal notification
     const val NORMAL_CHANNEL_ID = "normal_channel_id"
     const val NORMAL_NOTIFICATION_ID = 999
+    const val NORMAL_TAG = "Notification"
 
     // for clicking on button in Lockscreen-styled activity
     const val ACTION                     = "action";
