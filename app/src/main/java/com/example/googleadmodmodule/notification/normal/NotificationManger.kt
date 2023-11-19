@@ -46,29 +46,21 @@ object NotificationManger {
     }
 
     fun setupNotification(context: Context) {
-        log("--------------------------------")
-        log("--> setup daily notification !")
         //1. define current time
         val now = Calendar.getInstance()
         val hour = now[Calendar.HOUR_OF_DAY]
         val minute = now[Calendar.MINUTE]
         val month = now[Calendar.MONTH] + 1
+        val second = now[Calendar.SECOND]
         val date = now[Calendar.DATE]
         val year = now[Calendar.YEAR]
 
 
 
         //2. find time of next notification
-        val alarmHour = when(hour){
-            in 0..8 -> 9
-            in 9..11 -> 12
-            in 12..14 -> 15
-            in 15..17 -> 18
-            in 18..20 -> 21
-            in 20..21 -> 22
-            else -> 6
-        }
-
+        val alarmHour = hour + 1
+        val alarmMinute = 0
+        val alarmSecond = 30
 
 
         // 3. fire notification at specific time
@@ -76,14 +68,26 @@ object NotificationManger {
         val alarmTime = Calendar.getInstance()
         alarmTime.timeInMillis = System.currentTimeMillis()
         alarmTime[Calendar.HOUR_OF_DAY] = alarmHour
-        alarmTime[Calendar.MINUTE] = 0
-        alarmTime[Calendar.SECOND] = 30
+        alarmTime[Calendar.MINUTE] = alarmMinute
+        alarmTime[Calendar.SECOND] = alarmSecond
         if (now.after(alarmTime)) {
             alarmTime.add(Calendar.DATE, 1)
         }
 
-        log("--> now is $date/$month/$year $hour:$minute")
-        log("--> next notification at $alarmHour")
+        /*ONLY FOR TESTING*/
+        /*val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+        val alarmTime = Calendar.getInstance()
+        alarmTime.timeInMillis = System.currentTimeMillis()
+        alarmTime[Calendar.HOUR_OF_DAY] = 0
+        alarmTime[Calendar.MINUTE] = 0
+        alarmTime[Calendar.SECOND] = 15*/
+
+
+        log("--------------------------")
+        log("--> Notification")
+        log("--> now is $date/$month/$year $hour:$minute:$second")
+        log("--> next notification at $alarmHour:$alarmMinute:$alarmSecond")
+
 
         //Final. set up notification at specific time
         val intent = Intent(context, NotificationReceiver::class.java)

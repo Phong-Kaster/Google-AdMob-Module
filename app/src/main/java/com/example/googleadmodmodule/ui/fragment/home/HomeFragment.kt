@@ -73,10 +73,7 @@ class HomeFragment : CoreFragment<FragmentHomeBinding>(
         //2. observe what happens
         viewModel.userRelation.observe(viewLifecycleOwner) { userInfo ->
             if (userInfo != null) {
-                Log.d(
-                    TAG,
-                    "userInfo: ${userInfo.userEntity.firstName} ${userInfo.userEntity.lastName}"
-                )
+                Log.d(TAG, "userInfo: ${userInfo.userEntity.firstName} ${userInfo.userEntity.lastName}")
                 Log.d(TAG, "userInfo: ${userInfo.nationalityAtBirth.nation}")
                 Log.d(TAG, "userInfo: ${userInfo.playlists.size}")
             }

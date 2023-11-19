@@ -9,6 +9,7 @@ import android.content.Intent
 import android.os.Build
 import com.example.googleadmodmodule.R
 import com.example.googleadmodmodule.core.Constant
+import com.example.googleadmodmodule.notification.normal.NotificationManger
 import java.util.Calendar
 
 /**
@@ -42,17 +43,32 @@ object LockscreenManager {
         val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
         val alarmTime = Calendar.getInstance()
         val now = Calendar.getInstance()
+        val hour = now[Calendar.HOUR_OF_DAY]
+        val minute = now[Calendar.MINUTE]
+        val month = now[Calendar.MONTH] + 1
+        val second = now[Calendar.SECOND]
+        val date = now[Calendar.DATE]
+        val year = now[Calendar.YEAR]
+
+
+        val alarmHour = 8
+        val alarmMinute = 15
+        val alarmSecond = 30
 
 
         //2. fire daily lockscreen notification after 5 seconds
         alarmTime.timeInMillis = System.currentTimeMillis()
-        alarmTime[Calendar.HOUR] = 8
-        alarmTime[Calendar.MINUTE] = 0
-        alarmTime[Calendar.SECOND] = 5
+        alarmTime[Calendar.HOUR] = alarmHour
+        alarmTime[Calendar.MINUTE] = alarmMinute
+        alarmTime[Calendar.SECOND] = alarmSecond
         if (now.after(alarmTime)) {
             alarmTime.add(Calendar.DATE, 1)
         }
 
+        NotificationManger.log("---------------------------")
+        NotificationManger.log("--> Lockscreen Notification")
+        NotificationManger.log("--> now is $date/$month/$year $hour:$minute:$second")
+        NotificationManger.log("--> next notification at $alarmHour:$alarmMinute:$alarmSecond")
 
         //Final. set up notification at specific time
         val intent = Intent(context, LockscreenReceiver::class.java)

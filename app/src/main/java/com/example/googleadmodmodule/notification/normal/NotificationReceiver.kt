@@ -50,14 +50,13 @@ class NotificationReceiver : BroadcastReceiver() {
 
 
         //2. set customized view
-        val qoute = Quote.generateRandomQoute()
-        val contentShort: Int = qoute.short
-        val contentFull: Int = qoute.full
+        val quote = Quote.generateRandomQuote()
+        val contentFull: Int = quote.value
 
 
         //2.1 map data on notification layout
         val layoutSmall = RemoteViews(context.packageName, R.layout.layout_notification_small)
-        layoutSmall.setTextViewText(R.id.title, context.getString(contentShort))
+        layoutSmall.setTextViewText(R.id.title, context.getString(contentFull))
         //layoutSmall.setOnClickPendingIntent(R.id.notificationButton, pendingIntent)
 
         val layoutBig = RemoteViews(context.packageName, R.layout.layout_notification_big)
@@ -69,7 +68,7 @@ class NotificationReceiver : BroadcastReceiver() {
         val builder: NotificationCompat.Builder =
             NotificationCompat.Builder(context, Constant.NORMAL_CHANNEL_ID)
                 .setContentTitle(context.getString(R.string.app_name))
-                .setContentText(context.getString(R.string.qoute_1_full))
+                .setContentText(context.getString(contentFull))
                 .setCustomContentView(layoutSmall)
                 .setCustomBigContentView(layoutBig)
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
@@ -77,6 +76,7 @@ class NotificationReceiver : BroadcastReceiver() {
                 .setOngoing(true)
                 .setSmallIcon(R.drawable.ic_swastika)
                 .setContentIntent(pendingIntent)
+                .setSilent(true)
 
 
         //4. Show notification with notificationId which is a unique int for each notification that you must define

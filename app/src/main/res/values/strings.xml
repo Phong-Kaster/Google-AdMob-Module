@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Google AdMob Module</string>
+    <string name="app_name">Quote</string>
     <string name="app_description">A sample application is able to serve all general requirements</string>
     <string name="notification_description">This is a sample for notification description</string>
     <string name="lockscreen_description">This is a sample for lockscreen notification description</string>
@@ -38,181 +38,180 @@
     </string>
     <string name="tap_for_more_detail">Tap for more detail</string>
 
-    <string name="qoute_1_short">Trí tuệ con người trưởng thành trong học tập</string>
-    <string name="qoute_1_full">Trí tuệ con người trưởng thành trong học tập\nNhân cách con người hình thành trong bão tố</string>
+    <string name="quote_1">Trí tuệ con người trưởng thành trong học tập\nNhân cách con người hình thành trong bão tố</string>
 
-    <string name="qoute_2_short">Đồng tiền luôn phát ra âm thanh. Nhưng tờ tiền thì im lặng</string>
-    <string name="qoute_2_full">Đồng tiền luôn phát ra âm thanh. Nhưng tờ tiền thì im lặng. Vì vậy, khi giá trị của bạn tăng lên, thì hãy luôn luôn giữ yên lặng.</string>
+    <string name="quote_2">Đồng tiền luôn phát ra âm thanh. Nhưng tờ tiền thì im lặng. Vì vậy, khi giá trị của bạn tăng lên, thì hãy luôn luôn giữ yên lặng</string>
 
-    <string name="qoute_3_short">Dục tốc bất đạt.</string>
-    <string name="qoute_3_full">Dục tốc bất đạt.</string>
+    <string name="quote_3">Dục tốc bất đạt</string>
 
-    <string name="qoute_4_short">Tôi chỉ chiến đấu vì cái tôi yêu. Chỉ yêu những gì mà tôi tôn trọng</string>
-    <string name="qoute_4_full">Tôi chỉ chiến đấu vì cái tôi yêu. Chỉ yêu những gì mà tôi tôn trọng. Và tôn trọng những gì mà tôi biết</string>
+    <string name="quote_4">Tôi chỉ chiến đấu vì cái tôi yêu. Chỉ yêu những gì mà tôi tôn trọng. Và tôn trọng những gì mà tôi biết</string>
 
-    <string name="qoute_5_short">Đừng đánh giá một người bằng những gì người khác nói về họ</string>
-    <string name="qoute_5_full">Đừng đánh giá một người bằng những gì người khác nói về họ</string>
+    <string name="quote_5">Đừng đánh giá một người bằng những gì người khác nói về họ</string>
 
-    <string name="qoute_6_short">Nhanh có nghĩa là đi chậm không gián đoạn</string>
-    <string name="qoute_6_full">Nhanh có nghĩa là đi chậm không gián đoạn</string>
+    <string name="quote_6">Nhanh có nghĩa là đi chậm không gián đoạn</string>
 
-    <string name="qoute_7_short">Có người đến trong đời ta rồi qua đi mau.</string>
-    <string name="qoute_7_full">Có người đến trong đời ta rồi qua đi mau. Có một vài người dừng lại, để lại dấu ấn trong tim ta. Và sau đó ta không bao giống như trước nữa.</string>
+    <string name="quote_7">Có người đến trong đời ta rồi qua đi mau. Có một vài người dừng lại, để lại dấu ấn trong tim ta. Và sau đó ta không bao giống như trước nữa.</string>
 
-    <string name="qoute_8_short">Phải xem xét kỹ trước khi làm \nNhìn trước khi nhảy</string>
-    <string name="qoute_8_full">Phải xem xét kỹ trước khi làm \nNhìn trước khi nhảy</string>
+    <string name="quote_8">Phải xem xét kỹ trước khi làm \nNhìn trước khi nhảy</string>
 
-    <string name="qoute_9_short">Không cúi đầu, không chùn bước, không đầu hàng</string>
-    <string name="qoute_9_full">Không cúi đầu, không chùn bước, không đầu hàng</string>
+    <string name="quote_9">Không cúi đầu, không chùn bước, không đầu hàng</string>
 
-    <string name="qoute_10_short">Không cần phải chạy vội vã, chỉ cần đi đúng giờ</string>
-    <string name="qoute_10_full">Không cần phải chạy vội vã, chỉ cần đi đúng giờ</string>
+    <string name="quote_10">Không cần phải chạy vội vã, chỉ cần đi đúng giờ</string>
 
-    <string name="qoute_11_short">Khi nói dối, hãy nói ngắn gọn</string>
-    <string name="qoute_11_full">Khi nói dối, hãy nói ngắn gọn</string>
+    <string name="quote_11">Khi nói dối, hãy nói ngắn gọn</string>
 
-    <string name="qoute_12_short">Những con sông sâu nhất luôn chảy lặng lẽ</string>
-    <string name="qoute_12_full">Những con sông sâu nhất luôn chảy lặng lẽ</string>
+    <string name="quote_12">Những con sông sâu nhất luôn chảy lặng lẽ</string>
 
-    <string name="qoute_13_short">Sông sâu tĩnh lặng, lúa chín cúi đầu</string>
-    <string name="qoute_13_full">Sông sâu tĩnh lặng, lúa chín cúi đầu \nNước sâu tĩnh lặng, người khôn kiệm lời</string>
+    <string name="quote_13">Sông sâu tĩnh lặng, lúa chín cúi đầu \nNước sâu tĩnh lặng, người khôn kiệm lời</string>
 
-    <string name="qoute_14_short">Cái nết đánh chết cái đẹp</string>
-    <string name="qoute_14_full">Cái nết đánh chết cái đẹp</string>
+    <string name="quote_14">Cái nết đánh chết cái đẹp</string>
 
-    <string name="qoute_15_short">Làm đầy tớ thằng khôn còn hơn làm thầy thằng dại</string>
-    <string name="qoute_15_full">Làm đầy tớ thằng khôn còn hơn làm thầy thằng dại</string>
+    <string name="quote_15">Làm đầy tớ thằng khôn còn hơn làm thầy thằng dại</string>
 
-    <string name="qoute_16_short">Bệnh từ miệng vào, hoạ từ miệng ra</string>
-    <string name="qoute_16_full">Bệnh từ miệng vào, hoạ từ miệng ra</string>
+    <string name="quote_16">Bệnh từ miệng vào, hoạ từ miệng ra</string>
 
-    <string name="qoute_17_short">Bạn không bao giờ bị đánh bại, cho đến khi bạn tự bỏ cuộc</string>
-    <string name="qoute_17_full">Bạn không bao giờ bị đánh bại, cho đến khi bạn tự bỏ cuộc</string>
+    <string name="quote_17">Bạn không bao giờ bị đánh bại, cho đến khi bạn tự bỏ cuộc</string>
 
-    <string name="qoute_18_short">Yêu thương cho đi là yêu thương có thể giữ được mãi mãi</string>
-    <string name="qoute_18_full">Yêu thương cho đi là yêu thương có thể giữ được mãi mãi</string>
+    <string name="quote_18">Yêu thương cho đi là yêu thương có thể giữ được mãi mãi</string>
 
-    <string name="qoute_19_short">Ai hiểu được mình sẽ hiểu được cả thế giới</string>
-    <string name="qoute_19_full">Ai hiểu được mình sẽ hiểu được cả thế giới</string>
+    <string name="quote_19">Ai hiểu được mình sẽ hiểu được cả thế giới</string>
 
-    <string name="qoute_20_short">Sinh sự, sự sinh</string>
-    <string name="qoute_20_full">Sinh sự, sự sinh</string>
+    <string name="quote_20">Sinh sự, sự sinh</string>
 
-    <string name="qoute_21_short">Khi nói một người phụ nữ xấu. Bạn sẽ trở thành kẻ thù của họ</string>
-    <string name="qoute_21_full">Khi nói một người phụ nữ xấu. Bạn sẽ trở thành kẻ thù của họ</string>
+    <string name="quote_21">Khi nói một người phụ nữ xấu. Bạn sẽ trở thành kẻ thù của họ</string>
 
 
-    <string name="qoute_22_short">Thế giới thuộc về những người kiên nhẫn</string>
-    <string name="qoute_22_full">Thế giới thuộc về những người kiên nhẫn</string>
+    <string name="quote_22">Thế giới thuộc về những người kiên nhẫn</string>
 
-    <string name="qoute_23_short">Dốt nát một cách khôn khéo lại là sức mạnh</string>
-    <string name="qoute_23_full">Dốt nát một cách khôn khéo lại là sức mạnh – Victor Hugo</string>
+    <string name="quote_23">Dốt nát một cách khôn khéo lại là sức mạnh – Victor Hugo</string>
 
-    <string name="qoute_24_short">Kẻ dốt nát khẳng định. Người thông minh nghi ngờ. Nhà hiền triết suy nghĩ.</string>
-    <string name="qoute_24_full">Kẻ dốt nát khẳng định. Người thông minh nghi ngờ. Nhà hiền triết suy nghĩ. – Aristotle</string>
+    <string name="quote_24">Kẻ dốt nát khẳng định. Người thông minh nghi ngờ. Nhà hiền triết suy nghĩ. – Aristotle</string>
 
-    <string name="qoute_25_short">Đừng làm một điểm trên vòng tròn, hãy là tâm điểm</string>
-    <string name="qoute_25_full">Đừng làm một điểm trên vòng tròn, hãy là tâm điểm. – Luc Miriam</string>
+    <string name="quote_25">Đừng làm một điểm trên vòng tròn, hãy là tâm điểm. – Luc Miriam</string>
 
-    <string name="qoute_26_short">Cái gì bạn không giữ được trong miệng thì cũng không giữ được ở trong nhà</string>
-    <string name="qoute_26_full">Cái gì bạn không giữ được trong miệng thì cũng không giữ được ở trong nhà</string>
+    <string name="quote_26">Cái gì bạn không giữ được trong miệng thì cũng không giữ được ở trong nhà</string>
 
 
-    <string name="qoute_27_short">Bộ lông làm đẹp con công, học vấn làm đẹp con người.</string>
-    <string name="qoute_27_full">Bộ lông làm đẹp con công, học vấn làm đẹp con người.</string>
+    <string name="quote_27">Bộ lông làm đẹp con công, học vấn làm đẹp con người</string>
 
 
-    <string name="qoute_28_short">Khi tiền bạc nói ra thì sự thật yên lặng</string>
-    <string name="qoute_28_full">Khi tiền bạc nói ra thì sự thật yên lặng</string>
+    <string name="quote_28">Khi tiền bạc nói ra thì sự thật yên lặng</string>
 
 
-    <string name="qoute_29_short">Nếu tự khoe khoang về cái gì, bạn sẽ thất bại về cái ấy</string>
-    <string name="qoute_29_full">Nếu tự khoe khoang về cái gì, bạn sẽ thất bại về cái ấy – Ngạn ngữ Nga</string>
+    <string name="quote_29">Nếu tự khoe khoang về cái gì, bạn sẽ thất bại về cái ấy – Ngạn ngữ Nga</string>
 
 
-    <string name="qoute_30_short">Một lần khiêm tốn bằng bốn lần tự kiêu</string>
-    <string name="qoute_30_full">Một lần khiêm tốn bằng bốn lần tự kiêu</string>
+    <string name="quote_30">Một lần khiêm tốn bằng bốn lần tự kiêu</string>
 
-    <string name="qoute_31_short">Im lặng là câu trả lời tốt nhất với giận dữ</string>
-    <string name="qoute_31_full">Im lặng là câu trả lời tốt nhất với giận dữ – Ngạn ngữ Đức</string>
+    <string name="quote_31">Im lặng là câu trả lời tốt nhất với giận dữ – Ngạn ngữ Đức</string>
 
-    <string name="qoute_32_short">Im lặng là vàng</string>
-    <string name="qoute_32_full">Im lặng là vàng</string>
+    <string name="quote_32">Im lặng là vàng</string>
 
-    <string name="qoute_33_short">Ánh sáng đi trước âm thanh, vì thế, con người ta trông có vẻ thông minh cho đến khi ta nghe họ phát biểu</string>
-    <string name="qoute_33_full">Ánh sáng đi trước âm thanh, vì thế, con người ta trông có vẻ thông minh cho đến khi ta nghe họ phát biểu</string>
+    <string name="quote_33">Ánh sáng đi trước âm thanh, vì thế, con người ta trông có vẻ thông minh cho đến khi ta nghe họ phát biểu</string>
 
-    <string name="qoute_34_short">Bình yên là lúc không sầu cũng không vui</string>
-    <string name="qoute_34_full">Bình yên là lúc không sầu cũng không vui</string>
+    <string name="quote_34">Bình yên là lúc không sầu cũng không vui</string>
 
-    <string name="qoute_35_short">Cuộc sống là 10% những gì xảy ra với bạn và 90% là cách bạn phản ứng với nó</string>
-    <string name="qoute_35_full">Cuộc sống là 10% những gì xảy ra với bạn và 90% là cách bạn phản ứng với nó – Charles R. Swindoll</string>
+    <string name="quote_35">Cuộc sống là 10% những gì xảy ra với bạn và 90% là cách bạn phản ứng với nó – Charles R. Swindoll</string>
 
-    <string name="qoute_36_short">Nếu bạn giỏi thứ gì đó, đừng bao giờ làm nó miễn phí</string>
-    <string name="qoute_36_full">Nếu bạn giỏi thứ gì đó, đừng bao giờ làm nó miễn phí</string>
+    <string name="quote_36">Nếu bạn giỏi thứ gì đó, đừng bao giờ làm nó miễn phí</string>
 
-    <string name="qoute_37_short">Phụ nữ không có sức hấp dẫn mới cảm thấy đàn ông trăng hoa</string>
-    <string name="qoute_37_full">Phụ nữ không có sức hấp dẫn mới cảm thấy đàn ông trăng hoa. Đàn ông không có thực lực mới cảm thấy phụ nữ thực dụng</string>
+    <string name="quote_37">Phụ nữ không có sức hấp dẫn mới cảm thấy đàn ông trăng hoa. Đàn ông không có thực lực mới cảm thấy phụ nữ thực dụng</string>
 
-    <string name="qoute_38_short">Biết chấp nhận thực tế cũng là một loại năng lực</string>
-    <string name="qoute_38_full">Biết chấp nhận thực tế cũng là một loại năng lực. Biết hài lòng với những thứ mình có cũng là một loại hạnh phúc</string>
+    <string name="quote_38">Biết chấp nhận thực tế cũng là một loại năng lực. Biết hài lòng với những thứ mình có cũng là một loại hạnh phúc</string>
 
-    <string name="qoute_39_short">Hãy sống cuộc sống của loài cỏ dại, nở rất tươi không phải để ai nhìn</string>
-    <string name="qoute_39_full">Hãy sống cuộc sống của loài cỏ dại, nở rất tươi không phải để ai nhìn</string>
+    <string name="quote_39">Hãy sống cuộc sống của loài cỏ dại, nở rất tươi không phải để ai nhìn</string>
 
-    <string name="qoute_40_short">Nổi giận là bản năng, khống chế cảm xúc là bản lĩnh</string>
-    <string name="qoute_40_full">Nổi giận là bản năng, khống chế cảm xúc là bản lĩnh</string>
+    <string name="quote_40">Nổi giận là bản năng, khống chế cảm xúc là bản lĩnh</string>
 
-    <string name="qoute_41_short">Khi cuộc đời bạn chạm đáy, hãy yên tâm vì chỉ còn một đường là đi lên</string>
-    <string name="qoute_41_full">Khi cuộc đời bạn chạm đáy, hãy yên tâm vì chỉ còn một đường là đi lên</string>
+    <string name="quote_41">Khi cuộc đời bạn chạm đáy, hãy yên tâm vì chỉ còn một đường là đi lên</string>
 
-    <string name="qoute_42_short">Hai năm học nói, cả đời học lắng nghe</string>
-    <string name="qoute_42_full">Hai năm học nói, cả đời học lắng nghe</string>
+    <string name="quote_42">Hai năm học nói, cả đời học lắng nghe</string>
 
 
-    <string name="qoute_43_short">Hãy suy nghĩ hết những điều bạn nói nhưng đừng bao giờ nói hết những gì bạn nghĩ</string>
-    <string name="qoute_43_full">Hãy suy nghĩ hết những điều bạn nói nhưng đừng bao giờ nói hết những gì bạn nghĩ</string>
+    <string name="quote_43">Hãy suy nghĩ hết những điều bạn nói nhưng đừng bao giờ nói hết những gì bạn nghĩ</string>
 
-    <string name="qoute_44_short">Bạo lực là thủ đoạn sau cùng của kẻ ngu dốt</string>
-    <string name="qoute_44_full">Bạo lực là thủ đoạn sau cùng của kẻ ngu dốt</string>
+    <string name="quote_44">Bạo lực là thủ đoạn sau cùng của kẻ ngu dốt</string>
 
-    <string name="qoute_45_short">Nếu bạn không thể thay đổi luật chơi, hãy chơi theo luật một cách xuất sắc nhất</string>
-    <string name="qoute_45_full">Nếu bạn không thể thay đổi luật chơi, hãy chơi theo luật một cách xuất sắc nhất</string>
+    <string name="quote_45">Nếu bạn không thể thay đổi luật chơi, hãy chơi theo luật một cách xuất sắc nhất</string>
 
 
-    <string name="qoute_46_short">Trí thông minh bắt đầu từ kinh nghiệm, và kinh nghiệm bắt nguồn từ những lần ngu dốt</string>
-    <string name="qoute_46_full">Trí thông minh bắt đầu từ kinh nghiệm, và kinh nghiệm bắt nguồn từ những lần ngu dốt</string>
+    <string name="quote_46">Trí thông minh bắt đầu từ kinh nghiệm, và kinh nghiệm bắt nguồn từ những lần ngu dốt</string>
 
-    <string name="qoute_47_short">May mắn là khi sự chuẩn bị và thời cơ gặp nhau</string>
-    <string name="qoute_47_full">May mắn là khi sự chuẩn bị và thời cơ gặp nhau</string>
+    <string name="quote_47">May mắn là khi sự chuẩn bị và thời cơ gặp nhau</string>
 
-    <string name="qoute_48_short">Ai chiến thắng không hề chiến bại. Ai nên khôn chẳng dại đôi lần</string>
-    <string name="qoute_48_full">Ai chiến thắng không hề chiến bại. Ai nên khôn chẳng dại đôi lần - Tố Hữu</string>
+    <string name="quote_48">Ai chiến thắng không hề chiến bại. Ai nên khôn chẳng dại đôi lần - Tố Hữu</string>
 
-    <string name="qoute_49_short">Người khôn nghĩ rồi mới nói, người ngu đần nói rồi mới nghĩ</string>
-    <string name="qoute_49_full">Người khôn nghĩ rồi mới nói, người ngu đần nói rồi mới nghĩ</string>
+    <string name="quote_49">Người khôn nghĩ rồi mới nói, người ngu đần nói rồi mới nghĩ</string>
 
-    <string name="qoute_50_short">Không nên nói tất cả những gì mình biết nhưng bao giờ cũng phải biết những gì mình nói</string>
-    <string name="qoute_50_full">Không nên nói tất cả những gì mình biết nhưng bao giờ cũng phải biết những gì mình nói</string>
+    <string name="quote_50">Không nên nói tất cả những gì mình biết nhưng bao giờ cũng phải biết những gì mình nói</string>
 
-    <string name="qoute_51_short">Đừng sợ việc tiến chậm, hãy sợ việc đứng yên</string>
-    <string name="qoute_51_full">Đừng sợ việc tiến chậm, hãy sợ việc đứng yên</string>
+    <string name="quote_51">Đừng sợ việc tiến chậm, hãy sợ việc đứng yên</string>
 
-    <string name="qoute_52_short">Hãy làm việc khi người khác còn ngủ, học hỏi khi họ đang tiệc tùng, tiết kiệm khi họ đang mua sắm. Và bạn sẽ sớm có được cuộc sống mà họ luôn mong ước</string>
-    <string name="qoute_52_full">Hãy làm việc khi người khác còn ngủ, học hỏi khi họ đang tiệc tùng, tiết kiệm khi họ đang mua sắm. Và bạn sẽ sớm có được cuộc sống mà họ luôn mong ước</string>
+    <string name="quote_52">Hãy làm việc khi người khác còn ngủ, học hỏi khi họ đang tiệc tùng, tiết kiệm khi họ đang mua sắm. Và bạn sẽ sớm có được cuộc sống mà họ luôn mong ước</string>
 
-    <string name="qoute_53_short">Trong một cuộc tranh luận với sếp. Chỉ có hai khả năng có thể xảy ra: thứ nhất là bạn sai, thứ hai là sếp bạn đúng</string>
-    <string name="qoute_53_full">Trong một cuộc tranh luận với sếp. Chỉ có hai khả năng có thể xảy ra: thứ nhất là bạn sai, thứ hai là sếp bạn đúng</string>
+    <string name="quote_53">Trong một cuộc tranh luận với sếp. Chỉ có hai khả năng có thể xảy ra: thứ nhất là bạn sai, thứ hai là sếp bạn đúng</string>
 
-    <string name="qoute_54_short">Làm vừa lòng thiên hạ là một việc vừa khó lại vừa ngu</string>
-    <string name="qoute_54_full">Làm vừa lòng thiên hạ là một việc vừa khó lại vừa ngu</string>
+    <string name="quote_54">Làm vừa lòng thiên hạ là một việc vừa khó lại vừa ngu</string>
 
-    <string name="qoute_55_short">Đừng phàn nàn về cách người khác đối xử với bạn. Hãy xem cách bạn đối xử với họ</string>
-    <string name="qoute_55_full">Đừng phàn nàn về cách người khác đối xử với bạn. Hãy xem cách bạn đối xử với họ</string>
+    <string name="quote_55">Đừng phàn nàn về cách người khác đối xử với bạn. Hãy xem cách bạn đối xử với họ</string>
 
-<!--
-    <string name="qoute_0_short"></string>
-    <string name="qoute_0_full"></string>-->
 
+    <string name="quote_56">Gia đình là nơi cuộc sống bắt đầu và tình yêu không bao giờ kết thúc</string>
 
+    <string name="quote_57">Người nói yêu bạn chưa chắc đã đợi được bạn, nhưng người đợi được bạn chắc chắn rất yêu bạn</string>
+
+    <string name="quote_58">Không có độ tuổi đẹp nhất để kết hôn, chỉ có tình yêu đẹp nhất để kết hôn</string>
+
+    <string name="quote_59">Nếu ai đó yêu bạn hãy quý trọng điều đó. Vì trên đời còn nhiều người khác yêu họ hơn bạn nhưng họ vẫn chọn bạn để yêu</string>
+
+    <string name="quote_60">Cuộc sống không đủ hoàn hảo, nhưng khi có tình yêu, mọi thứ trở nên tuyệt vời hơn</string>
+
+    <string name="quote_61">Dũng cảm là vượt qua nỗi sợ hãi chứ không phải không sợ hãi</string>
+
+    <string name="quote_62">Sự khác biệt giữa những người thành công và những người thất bại không phải là ở sức mạnh, kiến thức hay sự hiểu biết mà chính là ở ý chí</string>
+
+    <string name="quote_63">Nếu bắt đầu thì có khả năng bạn sẽ nhận lấy thất bại, nhưng nếu không bắt đầu thì bạn đã thất bại rồi</string>
+
+    <string name="quote_64">Nơi lạnh nhất không phải là Bắc cực mà là nơi không có tình người</string>
+
+    <string name="quote_65">Bạn đừng bao giờ ghét những người hay đố kỵ với bạn. Hãy kính trọng sự đố kỵ đó, vì những người ấy chính là người nghĩ rằng bạn giỏi hơn họ</string>
+
+
+    <string name="quote_66">Ai cũng chọn việc nhẹ nhàng. Gian khổ sẽ giành phần ai</string>
+    <string name="quote_67">Đừng bao giờ giao bí mật của bạn cho một ai, bởi vì, tự bạn còn không giữ được thì còn trông mong vào ai kia chứ?</string>
+    <string name="quote_68">Nếu như bạn mong đợi người đời sẽ tử tế với bạn chỉ vì bạn tử tế với họ, thì cũng giống như việc bạn trông chờ một con sư tử không ăn thịt mình chỉ vì mình không ăn thịt nó. Cuộc sống vốn dĩ không công bằng, hãy học cách thích ứng đi</string>
+    <string name="quote_69">Thất bại đơn giản chỉ là cơ hội để bắt đầu lại mọi thứ một cách thông minh hơn</string>
+    <string name="quote_70">Bốn nguyên tắc vàng trong cuộc sống:\nTrung thực khi nghèo khó\nGiản dị khi giàu có\nLịch sự khi có uy quyền\nIm lặng khi giận dữ</string>
+    <string name="quote_71">Những khó khăn trong cuộc sống là điều không tránh khỏi, việc cần làm là lựa chọn cách thức để vượt qua</string>
+    <string name="quote_72">Cẩn thận với những suy nghĩ của bạn khi ở một mình, và cẩn thận với ngôn từ của bạn khi ở chốn đông người</string>
+    <string name="quote_73">Nếu bạn muốn thay đổi thế giới, hãy bắt đầu bằng việc thay đổi chính mình</string>
+    <string name="quote_74">Chiến thắng bản thân là chiến thắng hiển hách nhất</string>
+    <string name="quote_75">Càng trưởng thành, bạn sẽ nhận ra rằng tranh luận đúng sai hơn thua với người khác đôi khi không còn quan trọng nữa. Quan trọng là chỉ muốn bình yên</string>
+    <string name="quote_76">Hành trình ngàn dặm bắt đầu bằng một bước chân đầu tiên</string>
+    <string name="quote_77">Hãy sống như thể bạn sẽ chết ngày mai. Hãy học như thể bạn sẽ sống mãi mãi</string>
+    <string name="quote_78">Giá trị của một món hàng không nằm ở số tiền ta mua nó mà nằm ở số lần nó được sử dụng</string>
+    <string name="quote_79">Nếu bạn xuất sắc hơn người khác một chút, người ta sẽ ghen tị với bạn. Còn nếu bạn xuất sắc hơn rất nhiều, người ta sẽ hâm mộ bạn</string>
+    <string name="quote_80">Sự thất bại không phải là sự kết thúc, nó chỉ là bước đệm để thành công</string>
+    <string name="quote_81">Biết người, biết mặt, không biết lòng</string>
+    <string name="quote_82">Vẻ đẹp bên ngoài bắt nguồn từ sức khỏe bên trong</string>
+    <string name="quote_83">Hai mươi năm sau bạn sẽ hối hận vì những gì bạn không làm, hơn là những gì bạn đã làm – Mark Twain</string>
+    <string name="quote_84">Trên đời này làm gì có đường, người ta đi mãi thì thành đường thôi - Lỗ Tấn</string>
+    <string name="quote_85">Quá khứ không cho thấy bạn của hiện tại là ai, hiện tại không cho thấy bạn của tương lai là ai. Chỉ có bạn mới cho thấy được bạn là ai dù ở bất kì thời điểm nào</string>
+    <string name="quote_86">Đường chỉ tay không quyết định được số phận của bạn vì đường chỉ tay cũng chỉ nằm trong lòng bàn tay của bạn</string>
+    <string name="quote_87">Yêu đương cần trong sạch, qua lại phải công khai, chia tay nói rõ ràng</string>
+    <string name="quote_88">Kể cả khi bạn không hoàn hảo thì bạn vẫn là một "phiên bản có giới hạn"</string>
+    <string name="quote_89">Cuộc sống giống như đang lái một chiếc xe đạp. Để giữ thăng bằng, bạn phải luôn tiến về phía trước</string>
+    <string name="quote_90">Trên con đường thành công, không có dấu chân của kẻ lười biếng</string>
+    <string name="quote_91">Mỗi khi muốn bỏ cuộc, hãy nhớ lại lý do khiến ta bắt đầu</string>
+    <string name="quote_92">Trí tuệ con người trưởng thành trong tĩnh lặng, còn tính cách trưởng thành trong bão táp</string>
+    <string name="quote_93">Rủi ro lớn nhất là khi không chấp nhận bất kì rủi ro nào</string>
+    <string name="quote_94">Rủi ro đến từ việc bạn không biết mình đang làm gì</string>
+    <!--<string name="quote_95"></string>
+    <string name="quote_96"></string>
+    <string name="quote_97"></string>
+    <string name="quote_98"></string>
+    <string name="quote_99"></string>
+    <string name="quote_99"></string>
+    <string name="quote_100"></string>-->
+    <!--<string name="quote_"></string>-->
 </resources>

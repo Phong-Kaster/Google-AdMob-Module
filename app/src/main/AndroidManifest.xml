@@ -3,9 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools">
     <!-- For using alarm manager -->
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
-    <uses-permission android:name="android.permission.USE_EXACT_ALARM" /> <!-- For posting notification on Android 13 or higher -->
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" /> <!-- For showing Lockscreen Activity as device's lockscreen -->
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+
+    <!-- For posting notification on Android 13 or higher -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- For showing Lockscreen Activity as device's lockscreen -->
     <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+
+    <!-- For setting alarm when phone reboots-->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
         android:name=".MyApplication"
@@ -26,7 +33,7 @@
             android:launchMode="singleInstance"
             android:noHistory="true"
             android:showOnLockScreen="true"
-            android:theme="@style/LockscreenTheme"/>
+            android:theme="@style/LockscreenTheme" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -58,6 +65,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
     </application>

@@ -15,9 +15,9 @@
         android:layout_marginStart="0dp"
         android:layout_marginEnd="5dp"
         android:layout_weight="1"
-        android:text="@string/qoute_1_full"
+        android:text="@string/quote_70"
         android:textSize="14sp"
-        android:textStyle="bold" />
+        android:textStyle="bold|italic" />
 
     <ImageView
         android:layout_width="40dp"
